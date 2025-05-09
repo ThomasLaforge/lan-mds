@@ -1,0 +1,38 @@
+@use "../../styles/_variables" as *;
+
+
+
+
+  .tabs-header {
+    display: flex;
+    margin-bottom: 1rem;
+
+    button {
+   
+      border: none;
+      padding: 0.5rem 1rem;
+      margin-right: 10px;
+      cursor: pointer;
+      font-size: 1rem;
+      color: rgb(155, 155, 155);
+      border-radius: 10px;
+      background-color: #1d20564a;
+    
+
+ 
+      &.active {
+        font-weight: bold;
+        background-color: $bg-color-light;
+        color: white;
+      }
+    }
+  }
+  
+
+  .tabs-content {
+    color: white;
+    padding: 6%;
+    background-color: #1D2056;
+    border-radius: 18px;
+  }
+

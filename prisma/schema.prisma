@@ -1,0 +1,69 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Promo {
+  id    Int    @id @default(autoincrement())
+  name  String @unique
+  order Int
+
+  players Player[]
+}
+
+model RLRank {
+  id    Int    @id @default(autoincrement())
+  name  String @unique
+  order Int
+
+  players Player[]
+}
+
+model Player {
+  pseudo String @unique
+  name  String
+  firstname String
+
+  promoId Int
+  promo Promo @relation(fields: [promoId], references: [id])
+  levelId Int
+  level RLRank  @relation(fields: [levelId], references: [id])
+  teamId Int
+  team Team @relation(fields: [teamId], references: [id])
+}
+
+model Team {
+  id    Int    @id @default(autoincrement())
+  name  String @unique
+  acronym String @unique
+  players Player[]
+
+  createAt DateTime @default(now())
+
+  matches1 Match[] @relation("Team1")
+  matches2 Match[] @relation("Team2")
+}
+
+model Match {
+  id    Int    @id @default(autoincrement())
+  date  DateTime @default(now())
+
+  team1Id Int
+  team1 Team @relation("Team1", fields: [team1Id], references: [id])
+  team2Id Int
+  team2 Team @relation("Team2", fields: [team2Id], references: [id])
+
+  score1 Int
+  score2 Int
+
+  createAt DateTime @default(now())
+}
+model User {
+  id       Int    @id @default(autoincrement())
+  pseudo    String @unique
+  motdpasse String
+}

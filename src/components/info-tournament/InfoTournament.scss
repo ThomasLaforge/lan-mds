@@ -1,0 +1,32 @@
+@use "../../styles/variables" as *;
+
+.infosContainer {
+  color: $white;
+  font-size: $font-size-small;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  .infosTitle {
+    font-size: $font-size-subtitle;
+    font-weight: 400;
+    text-align: left;
+    margin: 0;
+  }
+
+  .infosList {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .infosButtonContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    span {
+      align-self: center;
+    }
+  }
+}

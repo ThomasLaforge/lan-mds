@@ -1,0 +1,66 @@
+@use "../../styles/_variables" as *;
+
+.navbar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: $bg-color-light;
+  padding: 8px 0;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+
+  .icon-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 32px;
+    border-radius: 16px;
+    aspect-ratio: 2/1;
+  }
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  text-decoration: none;
+  font-size: 0.9rem;
+  border-radius: 12px;
+  padding: 8px;
+  transition: background-color 0.3s;
+}
+
+.nav-item:hover > .icon-wrapper {
+  background-color: $bg-color;
+}
+
+.nav-item.active > .icon-wrapper {
+  background-color: $bg-color;
+}
+
+@media screen and (min-width: 769px) {
+  .navbar {
+    top: 0;
+    bottom: unset;
+    justify-content: flex-end;
+    gap: 8px;
+    padding: 16px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
+
+    .icon-wrapper {
+      display: none;
+    }
+    .nav-item:hover {
+      background-color: $bg-color;
+    }
+
+    .nav-item.active {
+      background-color: $bg-color;
+    }
+  }
+}

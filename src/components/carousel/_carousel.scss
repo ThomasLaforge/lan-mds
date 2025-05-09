@@ -1,0 +1,38 @@
+@use "../../styles/variables" as *;
+
+.carousel {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+
+  .carousel-current-day {
+    width: 100%;
+    border-radius: 40px;
+  }
+
+  .carousel-navigation {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+
+    .carousel-navigation-dot {
+      border-radius: 50%;
+      height: 16px;
+      width: 16px;
+      background-color: $bg-color-lighter;
+      cursor: pointer;
+      transition: background-color 0.3s ease-in-out;
+      &:hover {
+        background-color: $bg-color-lighter;
+      }
+    }
+    .carousel-navigation-dot-active {
+      background-color: $primary;
+    }
+  }
+}

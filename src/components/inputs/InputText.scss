@@ -1,0 +1,22 @@
+@use "../../styles/_variables" as *;
+
+.input-text {
+  background-color: $bg-color;
+  color: $white;
+  font-size: $font-size-small;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.input-text:focus {
+  border-color: $primary;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  transition: 0.3s ease-in-out;
+}
+
+.input-text:hover {
+  border-color: $primary;
+}

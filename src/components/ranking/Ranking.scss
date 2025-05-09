@@ -1,0 +1,73 @@
+@use "../../styles/_variables" as *;
+
+.resultsTable {
+  width: 100%;
+  color: $white;
+  border-collapse: separate;
+  border-spacing: 1px 3px;
+
+  td {
+    text-align: center;
+    padding: 15px 10px;
+  }
+
+  td:nth-child(2) {
+    text-align: start;
+  }
+
+  td:first-child {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  tr {
+    background: $gradient-blue;
+  }
+
+  thead tr {
+    border-radius: 0 5px 0 0;
+
+    td:last-child {
+      border-radius: 0 3px 0 0;
+
+      div {
+        border-radius: 0 5px 0 0;
+      }
+    }
+  }
+
+  tr {
+    background: $gradient-blue;
+  }
+
+  tbody tr:last-child {
+    border-radius: 0 0 5px 5px;
+
+    td:last-child {
+      border-radius: 0 0 3px 0;
+
+      div {
+        border-radius: 0 0 5px 0;
+      }
+    }
+
+    td:first-child {
+      border-radius: 0 0 0 5px;
+    }
+  }
+
+  tr td:last-child {
+    position: relative;
+    padding-right: 1rem;
+
+    div {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 3px;
+      height: 100%;
+      background: $gradient-orange;
+    }
+  }
+}

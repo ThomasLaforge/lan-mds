@@ -1,0 +1,17 @@
+.swissRoundBracket {
+    display: flex;
+    flex-direction: row;
+    gap: 48px;
+    overflow-x: scroll;
+    max-width: 100%;
+    align-items: center;
+    padding-bottom: 96px;
+
+
+    .roundListContainer {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        width: 90%;
+    }
+}

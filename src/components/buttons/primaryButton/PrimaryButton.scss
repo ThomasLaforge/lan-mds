@@ -1,0 +1,67 @@
+@use "sass:color";
+@use "../../../styles/_variables" as *;
+
+$primary-gradient: linear-gradient(
+  90deg,
+  $primary 0%,
+  $primary-dark 100%
+);
+$secondary-color: #6c757d;
+$danger-color: #dc3545;
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 12px;
+  font-size: $font-size-small;
+  font-weight: 400;
+  transition: background 0.3s ease;
+  cursor: pointer;
+  gap: 8px;
+  width: 100%;
+  // Tailles
+  &.sm {
+    padding: 6px 12px;
+    font-size: 14px;
+  }
+  &.md {
+    padding: 10px 16px;
+    font-size: 16px;
+  }
+  &.lg {
+    padding: 14px 20px;
+    font-size: 18px;
+  }
+
+  &.primary {
+    background: $primary-gradient;
+    color: white;
+    &:hover {
+      background: $primary-gradient;
+      opacity: 0.9;
+    }
+  }
+  &.secondary {
+    background-color: $secondary-color;
+    color: white;
+    &:hover {
+      background-color: color.adjust(
+        $secondary-color,
+        $lightness: -10%
+      );
+    }
+  }
+  &.danger {
+    background-color: $danger-color;
+    color: white;
+    &:hover {
+      background-color: color.adjust(
+        $danger-color,
+        $lightness: -10%
+      );
+    }
+  }
+}

@@ -1,0 +1,12 @@
+@use "../../styles/_variables" as *;
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 24px;
+  gap: 16px;
+  background: $bg-color-light;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}

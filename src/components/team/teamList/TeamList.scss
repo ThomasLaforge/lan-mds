@@ -1,0 +1,11 @@
+.team-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+@media screen and (min-width: 769px) {
+  .team-list {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}

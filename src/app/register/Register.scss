@@ -1,0 +1,83 @@
+@use "../../styles/_variables" as *;
+
+.registration-container {
+  color: $white;
+
+  h1 {
+    margin-bottom: 16px;
+  }
+
+  .register-container {
+    width: 100%;
+    
+    .infosContainer{
+      margin-bottom: 24px;
+    }
+
+
+    
+    .register-form {
+      width: 100%;
+
+      h2 {
+        margin-bottom: 16px;
+      }
+
+      .player-form {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+
+        .form-button {
+          display: flex;
+          justify-content: center;
+        }
+      }
+    }
+  }
+}
+
+.team-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  input {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .team-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    input {
+      width: 100%;
+    }
+  }
+
+  .team-form {
+    flex-direction: row;
+
+    input {
+      width: 100%;
+    }
+  }
+
+  .players {
+    display: flex;
+    gap: 16px;
+
+    div {
+      width: 100%;
+    }
+  }
+
+  .form-button {
+    button {
+      max-width: 150px;
+    }
+  }
+}

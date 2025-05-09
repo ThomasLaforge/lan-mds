@@ -1,0 +1,115 @@
+//// Variables CSS
+
+// import inter font google
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+// colors
+
+$bg-color: #15173d;
+$bg-color-light: #1d2056;
+$bg-color-lighter: #3f46bc;
+$primary: #e07a30;
+$primary-dark: #dd5227;
+$white: #ffffff;
+
+// fonts
+$font-family: "Inter", sans-serif;
+$weight-title: 600;
+$weight: 500;
+
+$font-size-subtitle: 18px;
+$font-size-title: 30px;
+$font-size-small: 14px;
+
+// animations / functions
+
+// gradient
+$gradient-orange: linear-gradient(
+  180deg,
+  $primary 0%,
+  $primary-dark 100%
+);
+
+$gradient-blue: linear-gradient(
+  -98deg,
+  $bg-color-lighter 0%,
+  $bg-color-light 100%
+);
+
+// Reset css
+
+/* 1. Use a more-intuitive box-sizing model */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+* {
+  margin: 0;
+}
+
+/* 3. Enable keyword animations */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    interpolate-size: allow-keywords;
+  }
+}
+
+body {
+  /* 4. Add accessible line-height */
+  line-height: 1.5;
+  /* 5. Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 6. Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 7. Inherit fonts for form controls */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* 8. Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* 9. Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+/*
+  10. Create a root stacking context
+*/
+#root,
+#__next {
+  isolation: isolate;
+}

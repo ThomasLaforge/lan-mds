@@ -1,0 +1,68 @@
+@use "../../../../styles/variables" as *;
+
+.teamMatch {
+    display: flex;
+    background: $gradient-blue;
+    width: 100%;
+    position: relative;
+
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 4px;
+        height: 100%;
+        background: $gradient-orange;
+    }
+
+    .team1 {
+        display: flex;
+        width: 50%;
+        border-right: black solid 1px;
+        padding-bottom: 8px;
+        padding-top: 8px;
+        justify-content: space-between;
+        align-items: center;
+
+        .team1name {
+            color: white;
+            margin-left: 16px;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+
+        .team1score {
+            color: white;
+            font-weight: bold;
+            margin-right: 20px;
+        }
+    }
+
+    .team2 {
+        display: flex;
+        width: 50%;
+        border-left: black solid 1px;
+        padding-bottom: 8px;
+        padding-top: 8px;
+        justify-content: space-between;
+        align-items: center;
+
+        .team2name {
+            color: white;
+            margin-right: 16px;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+
+        .team2score {
+            color: white;
+            font-weight: bold;
+            margin-right: 24px;
+            margin-left: 24px;
+        }
+    }
+}
