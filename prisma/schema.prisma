@@ -8,7 +8,7 @@ datasource db {
 }
 
 model Promo {
-  id    Int    @id @default(autoincrement())
+  id    Int    @id  @default(autoincrement())
   name  String @unique
   order Int
 
@@ -24,6 +24,7 @@ model RLRank {
 }
 
 model Player {
+  id    Int    @id @default(autoincrement())
   pseudo String @unique
   name  String
   firstname String
