@@ -1,5 +1,5 @@
-import TeamMatch from "./teammatch/TeamMatch.tsx";
 import "./SwissRoundElement.scss";
+import TeamMatch from "./teammatch/TeamMatch";
 
 
 export interface Matches {
@@ -23,8 +23,8 @@ export function SwissRoundElement (props: SwissRoundElementsProps){
         <div className="swissRoundElement">
             <h2>{nbWin} - {nbLoose}</h2>
             <div className="matches">
-                {matches.map((match) => (
-                    <TeamMatch team1={match.team1} team2={match.team2} scoreTeam1={match.scoreTeam1} scoreTeam2={match.scoreTeam2}/>
+                {matches.map((match, key) => (
+                    <TeamMatch key={key} team1={match.team1} team2={match.team2} scoreTeam1={match.scoreTeam1} scoreTeam2={match.scoreTeam2}/>
                 ))}
             </div>
         </div>

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { BeforeInstallPromptEvent } from "../../types";
 import "./InstallButton.scss";
 
@@ -19,10 +19,9 @@ const InstallButton: React.FC = () => {
     window.addEventListener("beforeinstallprompt", handler);
 
     let isChrome = false;
-    if (navigator.userAgentData?.brands) {
-      const brands = navigator.userAgentData.brands.map(
-        (b) => b.brand
-      );
+    const userAgentData = (navigator as Navigator & { userAgentData?: { brands: { brand: string }[] } }).userAgentData;
+    if (userAgentData?.brands) {
+      const brands = userAgentData.brands.map((b: { brand: string }) => b.brand);
       isChrome = brands.includes("Google Chrome");
     }
 
@@ -32,7 +31,7 @@ const InstallButton: React.FC = () => {
 
     const isAppInstalled =
       window.matchMedia("(display-mode: standalone)")
-        .matches || window.navigator.standalone === true;
+        .matches || (window.navigator as Navigator & { standalone?: boolean }).standalone === true;
     setIsInstalled(isAppInstalled);
 
     return () => {
@@ -67,12 +66,12 @@ const InstallButton: React.FC = () => {
   return supportsPWA ? (
     <div className="root">
       <p>
-        Installez l'application sur votre appareil dès
+        Installez l&apos;application sur votre appareil dès
         maintenant en cliquant sur le bouton ci-dessous.
       </p>
       <div className="buttonInstall">
         <button onClick={handleClick}>
-          Installer l'application
+          Installer l&apos;application
         </button>
       </div>
     </div>

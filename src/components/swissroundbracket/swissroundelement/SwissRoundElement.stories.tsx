@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from "@storybook/react";
-import { SwissRoundElement } from "./SwissRoundElement.tsx";
+import { SwissRoundElement } from "./SwissRoundElement";
 import "./SwissRoundElement.scss";
 
 const meta: Meta<typeof SwissRoundElement> = {

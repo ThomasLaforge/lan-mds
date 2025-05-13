@@ -14,7 +14,7 @@ export const Default: Story = {
     render: (args) => (
         <Card {...args}>
             <h2>Je suis une cartounette</h2>
-            <p>Avec du contenu à l'intérieur</p>
+            <p>Avec du contenu à l&apos;intérieur</p>
         </Card>
     ),
 };

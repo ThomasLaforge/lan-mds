@@ -1,4 +1,4 @@
-import { Player } from "../../pages/register/Register";
+import { Player } from "@/app/register/page";
 import InputText from "../inputs/InputText";
 import SelectList from "../selectList/SelectList";
 import "./PlayerForm.scss";

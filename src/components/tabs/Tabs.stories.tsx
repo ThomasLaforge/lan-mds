@@ -18,7 +18,7 @@ export const Default: Story = {
         content: () => (
           <div>
             <h3>Bienvenue</h3>
-            <p>Voici le contenu de l'onglet "Infos".</p>
+            <p>Voici le contenu de l&apos;onglet &quot;Infos&quot;.</p>
           </div>
         )
       },

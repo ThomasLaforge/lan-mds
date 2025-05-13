@@ -16,9 +16,9 @@ function RankRow({
   win,
   loss
 }: RankRowProps) {
-  var rankContent: React.ReactElement = <>{ranking}</>;
+  let rankContent: React.ReactElement = <>{ranking}</>;
   if (ranking <= 3) {
-    var trophy = TrophyGold;
+    let trophy = TrophyGold;
     if (ranking == 2) {
       trophy = TrophySilver;
     } else if (ranking == 3) {

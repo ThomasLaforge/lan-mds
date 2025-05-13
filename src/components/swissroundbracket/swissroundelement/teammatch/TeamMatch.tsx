@@ -1,4 +1,4 @@
-import {Matches} from "../SwissRoundElement.tsx";
+import { Matches } from "../SwissRoundElement";
 import "./TeamMatch.scss";
 
 export default function TeamMatch(match: Matches) {
